@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 import {
     add,
+    convertToSeconds,
     subtract,
 } from './functions.js';
 
@@ -56,7 +57,15 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+    test('divides two numbers', (expect) => {
+        const expected = 600
 
+        
+
+        const actual = convertToSeconds(10);
+
+        expect.equal(actual, expected);
+    })
 /* 
     Write a function that takes in the base and height
     of a triangle and returns its area (google it)
