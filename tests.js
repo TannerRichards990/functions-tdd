@@ -1,6 +1,11 @@
 // IMPORT MODULES under test here:
 import {
     add,
+    convertToSeconds,
+    subtract,
+    getArea,
+    lessThan100,
+    
 } from './functions.js';
 
 const test = QUnit.test;
@@ -17,9 +22,9 @@ const test = QUnit.test;
 test('adds two numbers', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const x = 2;
+    const x = 3;
     const y = 5;
-    const expected = 7;
+    const expected = 8;
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -38,7 +43,15 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator
 */
+    test('subtracts two numbers', (expect) => {
+        const x = 9;
+        const y = 3;
+        const expected = 6;
 
+        const actual = subtract(x, y);
+
+        expect.equal(actual, expected);
+    });
 /* 
     Write a function that takes in number of minutes
     and returns the number of seconds
@@ -47,7 +60,15 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+    test('divides two numbers', (expect) => {
+        const expected = 600
 
+        
+
+        const actual = convertToSeconds(10);
+
+        expect.equal(actual, expected);
+    })
 /* 
     Write a function that takes in the base and height
     of a triangle and returns its area (google it)
@@ -56,7 +77,15 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+    test('get area of traingle', (expect) => {
+        const base = 5
+        const height = 10 
+        const expected = 25
 
+        const actual = getArea(base, height);
+
+        expect.equal(actual, expected);
+    })
 /* 
     Write a function that takes in two 2 numbers
     and returns true if their sum is less than 100 or 
@@ -68,6 +97,13 @@ test('adds two numbers', (expect) => {
 
     Uses: Comparison operator(s), if/else control flow
 */
+   test('lessThan100', (expect) => {
+    const positive = lessThan100(25, 13)
+    const notPositive = lessThan100(88, 60)
+
+    expect.equal(positive, true);
+    expect.equal(notPositive, false);
+   })
 
 /* 
     Write a function that takes a number and
@@ -93,6 +129,14 @@ test('adds two numbers', (expect) => {
 
     Uses: comparison operator, if/else control flow
 */
+test('formats a name', (expect) => {
+const first = 'Ruth';
+const last = 'Ginsburg';
+const middle = 'Bader';
+
+expect.equal(formatName(first, last,), 'Ruth Ginsburg');
+})
+
 
 /* 
     Write a function that takes in a first, last, and a third optional
