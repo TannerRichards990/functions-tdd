@@ -3,6 +3,7 @@ import {
     add,
     convertToSeconds,
     subtract,
+    getArea,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -74,7 +75,15 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+    test('get area of traingle', (expect) => {
+        const base = 5
+        const height = 10 
+        const expected = 25
 
+        const actual = getArea(base, height);
+
+        expect.equal(actual, expected);
+    })
 /* 
     Write a function that takes in two 2 numbers
     and returns true if their sum is less than 100 or 
@@ -86,7 +95,12 @@ test('adds two numbers', (expect) => {
 
     Uses: Comparison operator(s), if/else control flow
 */
-
+    if(sum < 100) {
+        return true;
+    }
+    if (sum > 100){
+        return false;
+    }
 /* 
     Write a function that takes a number and
     and returns 'even' if number is even, otherwise 'odd'.
