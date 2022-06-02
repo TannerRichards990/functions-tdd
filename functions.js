@@ -19,13 +19,13 @@ export function lessThan100(a, b) {
     return (a + b) < 100;
 }
 
-export function formatName(first, last, middle) {
-    let name = first;
-    if (middle) {
-    name += ' ' + middle;
+export function evenOrOdd(num){
+    if (num % 2 === 0){
+        return 'even';
     }
-    name += ' ' + last;
-
-    return name;
+    else {
+        return 'odd';
+    }
 }
 
+//evenOrOdd in progress
