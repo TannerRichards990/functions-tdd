@@ -4,6 +4,8 @@ import {
     convertToSeconds,
     subtract,
     getArea,
+    lessThan100,
+    
 } from './functions.js';
 
 const test = QUnit.test;
@@ -95,12 +97,14 @@ test('adds two numbers', (expect) => {
 
     Uses: Comparison operator(s), if/else control flow
 */
-    if(sum < 100) {
-        return true;
-    }
-    if (sum > 100){
-        return false;
-    }
+   test('lessThan100', (expect) => {
+    const positive = lessThan100(25, 13)
+    const notPositive = lessThan100(88, 60)
+
+    expect.equal(positive, true);
+    expect.equal(notPositive, false);
+   })
+
 /* 
     Write a function that takes a number and
     and returns 'even' if number is even, otherwise 'odd'.
@@ -125,6 +129,14 @@ test('adds two numbers', (expect) => {
 
     Uses: comparison operator, if/else control flow
 */
+test('formats a name', (expect) => {
+const first = 'Ruth';
+const last = 'Ginsburg';
+const middle = 'Bader';
+
+expect.equal(formatName(first, last,), 'Ruth Ginsburg');
+})
+
 
 /* 
     Write a function that takes in a first, last, and a third optional
